@@ -4,3 +4,4 @@ config/__pycache__/
 
 courses/migrations/
 courses/__pycache__/
+db.sqlite3
