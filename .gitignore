@@ -1,2 +1,6 @@
 assets/
 static_cdn/
+config/__pycache__/
+
+courses/migrations/
+courses/__pycache__/
