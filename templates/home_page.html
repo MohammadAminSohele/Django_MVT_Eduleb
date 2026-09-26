@@ -20,19 +20,19 @@
 					{% for course in Courses %}
                         <div class="col-lg-4 col-sm-6 col-xs-12">
                             <div class="single_course">
-                                {% comment %} <div class="single_c_img">
-                                    <img src="{% static 'assets/img/course/1.png' %}" class="img-fluid" alt="course-image" />
-                                    <span>Education</span>
-                                </div> {% endcomment %}
+                                <div class="single_c_img">
+                                    <img src={{course.image.url}} />
+                                    {% comment %} <span>Education</span> {% endcomment %}
+                                </div> 
                                 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                                 <h4><a href="course.html">{{course.title}}</a></h4>
-                                <p><span class="ti-book"> </span> 12 Course</p>
+                                {% comment %} <p><span class="ti-book"> </span> 12 Course</p> {% endcomment %}
                                 <p><span class="ti-alarm-clock"> </span>{{course.time}}</p>
                                 <div class="price">{{course.price}} تومان</div> 
                             </div>
 					    </div><!-- END COL -->
                     {% endfor %}
-					<div class="col-lg-4 col-sm-6 col-xs-12">
+					{% comment %} <div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="single_course">
 							<div class="single_c_img">
 								<img src="{% static 'assets/img/course/2.png' %}" class="img-fluid" alt="course-image" />
@@ -44,9 +44,79 @@
 							<p><span class="ti-alarm-clock"> </span>3 Hrs 32 Min</p>
 							<div class="price">Course Fee - 49$</div>
 						</div>
-					</div><!-- END COL -->						
+					</div><!-- END COL -->						 {% endcomment %}
 				</div><!--- END ROW -->
 			</div><!--- END CONTAINER -->		
 		</section>
 {% endblock  %}
 <!-- END COURSE -->
+
+{% block catagory %}
+<!-- START CATEGORY TWO -->
+		<section class="category_two_area section-padding">
+			<div class="container">									
+				<div class="section-title text-center">
+					<h2>Popular Courses by category</h2>
+					<p>We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of learning options and gain new skills! Our school is know.</p>
+				</div>						
+				<div class="row">													
+					{% comment %} <div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+						<div class="cat_list_two">
+							<img src="{% static 'assets/img/cat1.jpg' %}" alt="" />
+							<span>02 Courses</span>
+							<h4><a href="#">Digital Marketing</a></h4>
+							<p>We offer a brand new approach to the most basic learning paradigms.</p>
+						</div>
+					</div><!--- END COL -->										 {% endcomment %}
+					{% for catagory in Catagory %}
+						<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+							<div class="cat_list_two">
+								<img src="{{catagory.images.url}}" alt="" />
+								{% comment %} <span>04 Courses</span> {% endcomment %}
+								<h4><a href="#">{{catagory.title}}</a></h4>
+								<p>{{catagory.description}}</p>
+							</div>
+						</div><!--- END COL -->			
+					{% endfor %}												  
+				</div><!--- END ROW -->
+			</div><!--- END CONTAINER -->
+		</section>
+		<!-- END CATEGORY TWO -->	
+{% endblock  %}
+
+{% block article %}
+<!-- START BLOG -->
+		<section id="blog" class="blog_area section-padding">
+			<div class="container">
+				<div class="section-title text-center">
+					<h2>Latest Blog & news</h2>
+					<p>We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of learning options and gain new skills! Our school is know.</p>
+				</div>	
+				<div class="row">		
+					{% comment %} <div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+						<div class="single_blog">
+							<img src="{% static 'assets/img/blog/1.jpg' %}" class="img-fluid" alt="image" />
+							<div class="content_box">
+								<span>May 10, 2024 | <a href="blog.html">Education</a></span>
+								<h2><a href="blog.html">Professional Mobile Painting and Sculpting</a></h2>
+								<a class="btn_one" href="blog.html">Read More <i class="ti-arrow-top-right"></i></a>
+							</div>
+						</div>
+					</div><!-- END COL-->				 {% endcomment %}
+					{% for article in Article %}
+					<div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
+						<div class="single_blog">
+							<img src="{{article.images.url}}" class="img-fluid" alt="image" />
+							<div class="content_box">
+								<span>{{article.created_date}} | <a href="blog.html"></a></span>
+								<h2><a href="blog.html">{{article.title}}</a></h2>
+								<a class="btn_one" href="blog.html">Read More <i class="ti-arrow-top-right"></i></a>							
+							</div>
+						</div>
+					</div><!-- END COL-->	
+					{% endfor %}				
+				</div><!-- / END ROW -->
+			</div><!-- END CONTAINER  -->
+		</section>	
+		<!-- END BLOG -->	
+{% endblock article %}

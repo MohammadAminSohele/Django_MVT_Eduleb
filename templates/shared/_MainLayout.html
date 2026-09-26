@@ -279,82 +279,7 @@
 	</section>
 	<!-- END CATEGORY -->			
 
-		<!-- START CATEGORY TWO -->
-		<section class="category_two_area section-padding">
-			<div class="container">									
-				<div class="section-title text-center">
-					<h2>Popular Courses by category</h2>
-					<p>We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of learning options and gain new skills! Our school is know.</p>
-				</div>						
-				<div class="row">													
-					<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="cat_list_two">
-							<img src="{% static 'assets/img/cat1.jpg' %}" alt="" />
-							<span>02 Courses</span>
-							<h4><a href="#">Digital Marketing</a></h4>
-							<p>We offer a brand new approach to the most basic learning paradigms.</p>
-						</div>
-					</div><!--- END COL -->										
-					<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="cat_list_two">
-							<img src="{% static 'assets/img/cat2.jpg' %}" alt="" />
-							<span>04 Courses</span>
-							<h4><a href="#">Ui/UX Design</a></h4>
-							<p>We offer a brand new approach to the most basic learning paradigms.</p>
-						</div>
-					</div><!--- END COL -->										
-					<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="cat_list_two">
-							<img src="{% static 'assets/img/cat3.jpg' %}" alt="" />
-							<span>01 Courses</span>
-							<h4><a href="#">Content Marketing</a></h4>
-							<p>We offer a brand new approach to the most basic learning paradigms.</p>
-						</div>
-					</div><!--- END COL -->										
-					<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="cat_list_two">
-							<img src="{% static 'assets/img/cat4.jpg' %}" alt="" />
-							<span>05 Courses</span>
-							<h4><a href="#">Photo lifestyle</a></h4>
-							<p>We offer a brand new approach to the most basic learning paradigms.</p>
-						</div>
-					</div><!--- END COL -->										
-					<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="cat_list_two">
-							<img src="{% static 'assets/img/cat5.jpg' %}" alt="" />
-							<span>03 Courses</span>
-							<h4><a href="#">Graphic Design</a></h4>
-							<p>We offer a brand new approach to the most basic learning paradigms.</p>
-						</div>
-					</div><!--- END COL -->										
-					<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="cat_list_two">
-							<img src="{% static 'assets/img/cat6.jpg' %}" alt="" />
-							<span>04 Courses</span>
-							<h4><a href="#">Interior Design</a></h4>
-							<p>We offer a brand new approach to the most basic learning paradigms.</p>
-						</div>
-					</div><!--- END COL -->										
-					<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="cat_list_two">
-							<img src="{% static 'assets/img/cat7.jpg' %}" alt="" />
-							<span>02 Courses</span>
-							<h4><a href="#">Arts & Design</a></h4>
-							<p>We offer a brand new approach to the most basic learning paradigms.</p>
-						</div>
-					</div><!--- END COL -->										
-					<div class="col-lg-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="cat_list_two">
-							<img src="{% static 'assets/img/cat8.jpg' %}" alt="" />
-							<span>01 Courses</span>
-							<h4><a href="#">Visual design</a></h4>
-							<p>We offer a brand new approach to the most basic learning paradigms.</p>
-						</div>
-					</div><!--- END COL -->							  
-				</div><!--- END ROW -->
-			</div><!--- END CONTAINER -->
-		</section>
-		<!-- END CATEGORY TWO -->			
+		{% block catagory %}{% endblock  %}		
 
 		<!-- START COURSE -->
 		{% block course %}{% endblock  %}
@@ -622,48 +547,7 @@
 		</section>
 		<!-- END TESTINUNIALS -->
 
-		<!-- START BLOG -->
-		<section id="blog" class="blog_area section-padding">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>Latest Blog & news</h2>
-					<p>We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of learning options and gain new skills! Our school is know.</p>
-				</div>	
-				<div class="row">		
-					<div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="single_blog">
-							<img src="{% static 'assets/img/blog/1.jpg' %}" class="img-fluid" alt="image" />
-							<div class="content_box">
-								<span>May 10, 2024 | <a href="blog.html">Education</a></span>
-								<h2><a href="blog.html">Professional Mobile Painting and Sculpting</a></h2>
-								<a class="btn_one" href="blog.html">Read More <i class="ti-arrow-top-right"></i></a>
-							</div>
-						</div>
-					</div><!-- END COL-->				
-					<div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0">
-						<div class="single_blog">
-							<img src="{% static 'assets/img/blog/2.jpg' %}" class="img-fluid" alt="image" />
-							<div class="content_box">
-								<span>May 16, 2024 | <a href="blog.html">Education</a></span>
-								<h2><a href="blog.html">Professional Ceramic Moulding for Beginner</a></h2>
-								<a class="btn_one" href="blog.html">Read More <i class="ti-arrow-top-right"></i></a>							
-							</div>
-						</div>
-					</div><!-- END COL-->
-					<div class="col-lg-4 col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
-						<div class="single_blog">
-							<img src="{% static 'assets/img/blog/3.jpg' %}" class="img-fluid" alt="image" />
-							<div class="content_box">
-								<span>May 18, 2024 | <a href="blog.html">Programing</a></span>
-								<h2><a href="blog.html">Education Is About Create Leaders For Tomorrow </a></h2>
-								<a class="btn_one" href="blog.html">Read More <i class="ti-arrow-top-right"></i></a>
-							</div>
-						</div>
-					</div><!-- END COL-->						
-				</div><!-- / END ROW -->
-			</div><!-- END CONTAINER  -->
-		</section>	
-		<!-- END BLOG -->	
+		{% block article %}{% endblock article %}
 		
 		{% include 'shared/Footer.html' %}	
 	
